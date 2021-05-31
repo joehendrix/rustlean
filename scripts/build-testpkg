@@ -1,0 +1,19 @@
+# This command
+#!/bin/sh
+set -e
+
+if [ "$#" -ne 1 ]; then
+    echo "Expected directory with Rust package."
+    echo ""
+    echo "  e.g., $0 examples/lean-testpkg"
+    exit 1
+fi
+
+
+if [ ! -f "$1/Cargo.toml" ]; then
+    echo "Could not find $1/Cargo.toml"
+    exit 1
+fi
+
+
+PATH="$PWD/target/debug:$PATH" ./target/debug/cargo build --manifest-path "$1/Cargo.toml"

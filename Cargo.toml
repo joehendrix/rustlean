@@ -1,0 +1,11 @@
+[workspace]
+
+members = [
+    "cargo",
+    "cargobuild-lean"
+]
+
+exclude = [
+    "examples/lean-testpkg",
+    "examples/rust-testpkg"
+]

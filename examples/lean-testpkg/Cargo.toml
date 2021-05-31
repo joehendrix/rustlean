@@ -1,0 +1,9 @@
+cargo-features = ["extern-build"]
+
+[package]
+buildsystem = "lean"
+name = "lean-testpkg"
+version = "0.1.0"
+authors = ["Joe Hendrix <jhendrix@galois.com>"]
+
+[dependencies]
